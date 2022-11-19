@@ -1,3 +1,5 @@
+//Здесь динамически создаю Опшин для селекта если такой вариант
+//предусмотрен и может меняться динамически
 function createOption() {
   for (let i = 1; i <= 5; i++) {
     const option = document.createElement("p");
@@ -80,9 +82,10 @@ function initMap() {
     map,
   });
 }
-
 window.initMap = initMap;
 
+// Создаю функцию которая работает с кастомным селектом
+// сдесь сделан максимально простой функционал
 const select = () => {
   let selectHeader = document.querySelectorAll(".select__header");
   let selectItem = document.querySelectorAll(".select__item");

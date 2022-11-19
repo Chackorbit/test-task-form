@@ -118,42 +118,6 @@
     margin-left: 13px;
 }
 
-/* .form_select {
-    /* display: none; */
-/* appearance: none;
-} */
-
-/* .select-items {
-    position: absolute;
-    background-color: DodgerBlue;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-} */
-
-/* .form_select:required:invalid {
-    font-size: 16px;
-    line-height: 1.75;
-
-    color: rgba(65, 64, 66, 0.7);
-} */
-
-/* .form_label-select {
-    position: relative;
-} */
-
-/* .form_label-select:after {
-    content: "";
-    background: url("../helpers/arrow.svg") no-repeat;
-    width: 10px;
-    height: 6px;
-    right: 8px;
-    top: 30px;
-    position: absolute;
-    pointer-events: none;
-} */
-
 .form_message {
     height: 300px;
     padding-top: 18px;
@@ -218,6 +182,7 @@
     color: #858585;
 }
 
+/* для удобства делаю только один медиазапрос */
 @media screen and (min-width: 1440px) {
     .container {
         flex-direction: row;
@@ -233,7 +198,6 @@
         flex-direction: row;
         gap: 0;
     }
-
 
     .label:nth-child(odd) {
         margin-right: 32px;
