@@ -1,29 +1,28 @@
-let select = document.querySelectorAll("select");
-console.log("select: ", select);
-
-function createCustomSelect() {
+function createOption() {
   for (let i = 1; i <= 5; i++) {
-    const option = document.createElement("option");
-    option.className = "option";
+    const option = document.createElement("p");
+    option.className = "select__item";
     option.innerHTML = `Option ${i}`;
 
     document.getElementById("practice").appendChild(option);
   }
   for (let i = 1; i <= 5; i++) {
-    const option = document.createElement("option");
+    const option = document.createElement("p");
+    option.className = "select__item";
     option.innerHTML = `Option ${i}`;
 
     document.getElementById("medicalprof").appendChild(option);
   }
   for (let i = 1; i <= 5; i++) {
-    const option = document.createElement("option");
+    const option = document.createElement("p");
+    option.className = "select__item";
     option.innerHTML = `Option ${i}`;
 
     document.getElementById("typeofinquiry").appendChild(option);
   }
 }
 
-createCustomSelect();
+createOption();
 
 // Initialize and add the map
 function initMap() {
@@ -69,3 +68,30 @@ function initMap() {
 }
 
 window.initMap = initMap;
+
+const select = () => {
+  let selectHeader = document.querySelectorAll(".select__header");
+  let selectItem = document.querySelectorAll(".select__item");
+
+  selectHeader.forEach((item) => {
+    item.addEventListener("click", selectToggle);
+  });
+  selectItem.forEach((item) => {
+    item.addEventListener("click", selectChoose);
+  });
+
+  function selectToggle() {
+    this.parentElement.classList.toggle("is-active");
+  }
+
+  function selectChoose() {
+    let text = this.innerText;
+    let select = this.closest(".select");
+    let currentText = select.querySelector(".select__current");
+    currentText.innerText = text;
+    select.classList.remove("is-active");
+    currentText.classList.remove("select__item-disabled");
+  }
+};
+
+select();

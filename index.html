@@ -29,11 +29,13 @@
                     <input type="text" name="position" id="position" placeholder="Title/Position*" required />
                 </label>
 
-                <label class="form_label-select label">
-                    <select class="form_select" name="practice" id="practice" required>
-                        <option class="option" value="" selected disabled><span>Practice / Institution*</span></option>
-                    </select>
-                </label>
+                <div class="select label">
+                    <div class="select__header">
+                        <span class="select__current select__item-disabled">Practice / Institution*</span>
+                    </div>
+                    <div class="select__body" id="practice">
+                    </div>
+                </div>
 
                 <label class="label">
                     <input type="email" name="email" id="email" placeholder="Email Address*" required></input>
@@ -43,23 +45,26 @@
                     <input type="number" name="number" id="number" placeholder="Phone Number*" required></input>
                 </label>
 
-                <label class="form_label-select label">
-                    <select class="form_select" name="medicalprof" id="medicalprof" required>
-                        <option class="option" value="" selected disabled><span>Medical Profession*</span></option>
-                    </select>
-                </label>
+                <div class="select label">
+                    <div class="select__header">
+                        <span class="select__current select__item-disabled">Medical Profession*</span>
+                    </div>
+                    <div class="select__body" id="medicalprof">
+                    </div>
+                </div>
 
-                <label class="form_label-select label">
-                    <select class="form_select" name="typeofinquiry" id="typeofinquiry" required>
-                        <option class="option" value="" selected disabled><span>Type of Inquiry*</span></option>
-                    </select>
-                </label>
-                <!-- <div class="form_message_container"> -->
+                <div class="select label">
+                    <div class="select__header">
+                        <span class="select__current select__item-disabled">Type of Inquiry*</span>
+                    </div>
+                    <div class="select__body" id="typeofinquiry">
+                    </div>
+                </div>
+
                 <textarea class="form_message" name="message" id="message" placeholder="Enter Message*"
                     required></textarea>
 
                 <button class="form_button" type="submit">Send Message</button>
-                <!-- </div> -->
             </form>
         </div>
 

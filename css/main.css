@@ -29,7 +29,7 @@
 }
 
 .form input,
-select {
+.select {
     width: 335px;
     height: 64px;
     padding: 18px 0 18px 19px;
@@ -38,36 +38,112 @@ select {
     border-radius: 8px;
 }
 
-.form_select {
-    /* display: none; */
-    appearance: none;
+.select {
+    position: relative;
+    background-color: #ffffff;
 }
 
-.select-items {
+.select.is-active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.select.is-active .select__body {
+    display: block;
+}
+
+.select__header {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+
+.select__header::after {
+    content: "";
+    background: url("../helpers/arrow.svg") no-repeat;
+    width: 10px;
+    height: 6px;
+    right: 8px;
+    top: 15px;
     position: absolute;
-    background-color: DodgerBlue;
-    top: 100%;
+    pointer-events: none;
+}
+
+.select__current,
+.select__item {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #424242;
+}
+
+.select__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-left: auto;
+}
+
+.select__body {
+    position: absolute;
     left: 0;
     right: 0;
-    z-index: 99;
-}
-
-.select-hide {
+    top: 100%;
     display: none;
+    background: #ffffff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    z-index: 99;
+    box-shadow: 0px 16px 32px rgba(202, 203, 210, 0.25);
 }
 
-.form_select:required:invalid {
+.select__item {
+    padding: 8px;
+
+    cursor: pointer;
+}
+
+.select__item-disabled {
     font-size: 16px;
     line-height: 1.75;
 
     color: rgba(65, 64, 66, 0.7);
 }
 
-.form_label-select {
-    position: relative;
+.select__item:hover {
+    background: #f2f2f2;
+    margin-left: 13px;
 }
 
-.form_label-select:after {
+/* .form_select {
+    /* display: none; */
+/* appearance: none;
+} */
+
+/* .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+} */
+
+/* .form_select:required:invalid {
+    font-size: 16px;
+    line-height: 1.75;
+
+    color: rgba(65, 64, 66, 0.7);
+} */
+
+/* .form_label-select {
+    position: relative;
+} */
+
+/* .form_label-select:after {
     content: "";
     background: url("../helpers/arrow.svg") no-repeat;
     width: 10px;
@@ -76,7 +152,7 @@ select {
     top: 30px;
     position: absolute;
     pointer-events: none;
-}
+} */
 
 .form_message {
     height: 300px;
@@ -165,8 +241,8 @@ select {
     }
 
     .form input,
-    select {
-        width: 299px
+    .select {
+        width: 299px;
     }
 
     .form_message {
@@ -184,6 +260,4 @@ select {
 
         color: #1a1a1a;
     }
-
-
 }
