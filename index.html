@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container_form">
+            <h2>Contact Us</h2>
+            <p class="container-text">The Voodoo team is looking forward to hearing from you!</p>
+
+            <form class="form">
+                <label class="label">
+                    <input type="text" name="fullname" id="fullname" placeholder="Full Name*" required />
+                </label>
+
+                <label class="label">
+                    <input type="text" name="position" id="position" placeholder="Title/Position*" required />
+                </label>
+
+                <label class="form_label-select label">
+                    <select class="form_select" name="practice" id="practice" required>
+                        <option class="option" value="" selected disabled><span>Practice / Institution*</span></option>
+                    </select>
+                </label>
+
+                <label class="label">
+                    <input type="email" name="email" id="email" placeholder="Email Address*" required></input>
+                </label>
+
+                <label class="label">
+                    <input type="number" name="number" id="number" placeholder="Phone Number*" required></input>
+                </label>
+
+                <label class="form_label-select label">
+                    <select class="form_select" name="medicalprof" id="medicalprof" required>
+                        <option class="option" value="" selected disabled><span>Medical Profession*</span></option>
+                    </select>
+                </label>
+
+                <label class="form_label-select label">
+                    <select class="form_select" name="typeofinquiry" id="typeofinquiry" required>
+                        <option class="option" value="" selected disabled><span>Type of Inquiry*</span></option>
+                    </select>
+                </label>
+                <!-- <div class="form_message_container"> -->
+                <textarea class="form_message" name="message" id="message" placeholder="Enter Message*"
+                    required></textarea>
+
+                <button class="form_button" type="submit">Send Message</button>
+                <!-- </div> -->
+            </form>
+        </div>
+
+        <div class="map" id="map"></div>
+    </div>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp4mypNUkiisiumY6NRcEiE0nOY9EuOO0&callback=initMap&v=weekly"
+        defer></script>
+
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
